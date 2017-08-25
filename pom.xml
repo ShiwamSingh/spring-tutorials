@@ -4,13 +4,28 @@
 	<groupId>spring-tutorials</groupId>
 	<artifactId>spring-tutorials</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-
+	<properties>
+		<spring.version>4.3.10.RELEASE</spring.version>
+	</properties>
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring -->
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring</artifactId>
-			<version>2.5.6</version>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/cglib/cglib -->
+		<!-- JavaConfig need this library -->
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib</artifactId>
+			<version>3.2.5</version>
 		</dependency>
 
 	</dependencies>

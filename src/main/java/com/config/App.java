@@ -1,11 +1,13 @@
 package com.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.helloworld.CustomerBo;
 import com.helloworld.HelloWorld;
 import com.helloworld.SchedulerBo;
+import com.output.OutputHelper;
 
 public class App {
 
@@ -23,6 +25,8 @@ public class App {
 		SchedulerBo scheduler = (SchedulerBo) context.getBean("scheduler");
 		scheduler.printMsg("Hello 2");
 
+		OutputHelper output = (OutputHelper)context.getBean("OutputHelper");
+		output.generateOutput();
 
 	}
 
